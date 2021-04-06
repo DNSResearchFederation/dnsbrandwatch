@@ -1,0 +1,38 @@
+[
+  {
+    "key": "referringDomains",
+    "value": "dnstrust.test",
+    "valueIndex": 0
+  },
+  {
+    "key": "referringDomains",
+    "value": "dashboard.dnstrust.test",
+    "valueIndex": 1
+  },
+  {
+    "key": "referringDomains",
+    "value": "admin.dnstrust.test",
+    "valueIndex": 2
+  },
+  {
+    "key": "brandName",
+    "value": "DNS Trust",
+    "valueIndex": 0
+  },
+  {
+    "key": "websiteURL",
+    "value": "http://dnstrust.test:2024"
+  },
+  {
+    "key": "dashboardURL",
+    "value": "http://dashboard.dnstrust.test:7999"
+  },
+  {
+    "key": "fromEmailAddress",
+    "value": "DNS Trust <noreply@dnstrust.com>"
+  },
+  {
+    "key": "replyToEmailAddress",
+    "value": "noreply@dnstrust.com"
+  }
+]
