@@ -1,0 +1,198 @@
+<h1 class="page-title">Overview</h1>
+<div class="flex-container">
+    <div class="widget lg">
+        <mat-tab-group animationDuration="0ms">
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <p class="tab-top">Domains</p>
+                    <p class="tab-lg">{{domainChartData[0].data[domainChartData[0].data.length - 1]}}</p>
+                    <p class="tab-bottom success">45%</p>
+                </ng-template>
+                <canvas baseChart style="height: 200px"
+                        [datasets]="domainChartData"
+                        [labels]="lineChartLabels"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        [plugins]="lineChartPlugins">
+                </canvas>
+                <div class="tab-footer">
+                    <div></div>
+                    <button mat-button color="primary" [routerLink]="['/domains']">
+                        View Domains
+                        <mat-icon>chevron_right</mat-icon>
+                    </button>
+                </div>
+            </mat-tab>
+
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <p class="tab-top">Registrars</p>
+                    <p class="tab-lg">{{registrarChartData[0].data[registrarChartData[0].data.length - 1]}}</p>
+                    <p class="tab-bottom success">25%</p>
+                </ng-template>
+                <canvas baseChart style="height: 200px"
+                        [datasets]="registrarChartData"
+                        [labels]="lineChartLabels"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        [plugins]="lineChartPlugins">
+                </canvas>
+                <div class="tab-footer">
+                    <div></div>
+                    <button mat-button color="primary" [routerLink]="['/registrars']">
+                        View Registrars
+                        <mat-icon>chevron_right</mat-icon>
+                    </button>
+                </div>
+            </mat-tab>
+
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <p class="tab-top">Law Enforce</p>
+                    <p class="tab-lg">{{lawChartData[0].data[lawChartData[0].data.length - 1]}}</p>
+                    <p class="tab-bottom success">50%</p>
+                </ng-template>
+                <canvas baseChart style="height: 200px"
+                        [datasets]="lawChartData"
+                        [labels]="lineChartLabels"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        [plugins]="lineChartPlugins">
+                </canvas>
+                <div class="tab-footer">
+                    <div></div>
+                    <button mat-button color="primary" [routerLink]="['/law-enforcement']">
+                        View Law Enforcement
+                        <mat-icon>chevron_right</mat-icon>
+                    </button>
+                </div>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <p class="tab-top">Members</p>
+                    <p class="tab-lg">{{memberChartData[0].data[memberChartData[0].data.length - 1]}}</p>
+                    <p class="tab-bottom success">70%</p>
+                </ng-template>
+                <canvas baseChart style="height: 200px"
+                        [datasets]="memberChartData"
+                        [labels]="lineChartLabels"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColors"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        [plugins]="lineChartPlugins">
+                </canvas>
+                <div class="tab-footer">
+                    <div></div>
+                    <button mat-button color="primary" [routerLink]="['/members']">
+                        View Members
+                        <mat-icon>chevron_right</mat-icon>
+                    </button>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+    <div class="widget sm">
+        <div class="widget-main" *ngIf="domainBreakdown">
+            <div>
+                <h1>Domain Scores</h1>
+
+                <p class="align-center">
+                    <img src="/assets/dnstrust_green.png" alt="trusted shield" height="20"
+                         style="margin-right: .5rem">
+                    <b>{{domainBreakdown.trusted.length}}</b>&nbsp;Trusted domains
+                </p>
+                <p class="align-center">
+                    <img src="/assets/dnstrust_blue.png" alt="watched shield" height="20"
+                         style="margin-right: .5rem">
+                    <b>{{domainBreakdown.watched.length}}</b>&nbsp;Domains being monitored
+                </p>
+                <p class="align-center">
+                    <img src="/assets/dnstrust_red.png" alt="alert shield" height="20"
+                         style="margin-right: .5rem">
+                    <b>{{domainBreakdown.alert.length}}</b>&nbsp;Domains with alerts
+                </p>
+
+                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+                        [legend]="barChartLegend" [chartType]="barChartType"
+                        [colors]="barChartColor" style="margin-top: 4rem"></canvas>
+
+            </div>
+
+            <div class="widget-footer">
+                <div></div>
+                <button mat-button color="primary" [routerLink]="['/domains']">
+                    View Domains
+                    <mat-icon>chevron_right</mat-icon>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="widget full">
+        <div class="widget-main">
+            <h1>Domain Alerts</h1>
+
+            <table mat-table [dataSource]="dataSource">
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="domainName">
+                    <th mat-header-cell *matHeaderCellDef> Domain Name</th>
+                    <td mat-cell *matCellDef="let element" style="width: 50%">
+                        {{element.domainName}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="score">
+                    <th mat-header-cell *matHeaderCellDef> Score</th>
+                    <td mat-cell *matCellDef="let element"><b>{{element.score}}</b></td>
+                </ng-container>
+
+                <!-- Weight Column -->
+                <ng-container matColumnDef="status">
+                    <th mat-header-cell *matHeaderCellDef> Status</th>
+                    <td mat-cell *matCellDef="let element">
+                        <ng-template [ngIf]="element.score < 15">
+                            <div class="status">
+                                <img src="/assets/dnstrust_red.png" alt="" height="20">
+                                <span class="alert">Alert</span>
+                            </div>
+                        </ng-template>
+                        <ng-template [ngIf]="element.score >= 15 && element.score < 60">
+                            <div class="status">
+                                <img src="/assets/dnstrust_blue.png" alt="" height="20">
+                                <span class="watched">Monitored</span>
+                            </div>
+                        </ng-template>
+                        <ng-template [ngIf]="element.score >= 60">
+                            <div class="status">
+                                <img src="/assets/dnstrust_green.png" alt="" height="20">
+                                <span class="trusted">Trusted</span>
+                            </div>
+                        </ng-template>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+            <div class="widget-footer">
+                <div></div>
+                <button mat-button color="primary" [routerLink]="['/domains']">
+                    View Domains
+                    <mat-icon>chevron_right</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+

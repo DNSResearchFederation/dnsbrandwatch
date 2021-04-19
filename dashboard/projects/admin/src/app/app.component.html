@@ -1,0 +1,110 @@
+<mat-toolbar id="toolbar" color="primary">
+    <a href="#" class="site-logo">
+        <img src="/assets/dnstrust_full.png" alt="DNS Trust logo">
+    </a>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav id="sidebar" #snav [mode]="mobileQuery.matches ? 'push' : 'side'"
+                 [opened]="!mobileQuery.matches">
+
+        <div>
+            <div class="menu-items">
+                <a [routerLink]="['/home']" routerLinkActive="active" class="menu-item">
+                    <mat-icon>home</mat-icon>
+                    <span>Home</span>
+                </a>
+            </div>
+
+            <div class="menu-items">
+                <p class="menu-title">Overview</p>
+                <a [routerLink]="['/domains']" routerLinkActive="active" class="menu-item">
+                    <mat-icon>domain</mat-icon>
+                    <span>Domains</span>
+                </a>
+
+                <a [routerLink]="['/registrars']" routerLinkActive="active" class="menu-item">
+                    <mat-icon>recent_actors</mat-icon>
+                    <span>Registrars</span>
+                </a>
+
+                <a [routerLink]="['/law-enforcement']" routerLinkActive="active" class="menu-item">
+                    <mat-icon>local_police</mat-icon>
+                    <span>Law Enforcement</span>
+                </a>
+
+                <a [routerLink]="['/members']" routerLinkActive="active" class="menu-item">
+                    <mat-icon>badge</mat-icon>
+                    <span>Members</span>
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="menu-items">
+                <p class="menu-title">Account</p>
+                <a [routerLink]="['/my-account']" routerLinkActive="active" class="menu-item">
+                    <mat-icon>manage_accounts</mat-icon>
+                    <span>My Account</span>
+                </a>
+                <a href="#" class="menu-item">
+                    <mat-icon>logout</mat-icon>
+                    <span>Logout</span>
+                </a>
+            </div>
+
+            <div class="menu-divider"></div>
+            <button mat-icon-button color="accent" class="menu-back"
+                    (click)="snav.toggle()">
+                <mat-icon>chevron_left</mat-icon>
+            </button>
+        </div>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content id="main" [ngClass]="{'small-sidebar': showFixedSidebar}">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<div class="fixed-sidebar-small" *ngIf="showFixedSidebar">
+    <div>
+        <div class="menu-items sm">
+            <a [routerLink]="['/home']" routerLinkActive="active" class="menu-item">
+                <mat-icon>home</mat-icon>
+            </a>
+        </div>
+
+        <div class="menu-items sm">
+            <a [routerLink]="['/domains']" routerLinkActive="active" class="menu-item">
+                <mat-icon>domain</mat-icon>
+            </a>
+
+            <a [routerLink]="['/registrars']" routerLinkActive="active" class="menu-item">
+                <mat-icon>recent_actors</mat-icon>
+            </a>
+
+            <a [routerLink]="['/law-enforcement']" routerLinkActive="active" class="menu-item">
+                <mat-icon>local_police</mat-icon>
+            </a>
+
+            <a [routerLink]="['/members']" routerLinkActive="active" class="menu-item">
+                <mat-icon>badge</mat-icon>
+            </a>
+        </div>
+    </div>
+    <div>
+        <div class="menu-items sm">
+            <a [routerLink]="['/my-account']" routerLinkActive="active" class="menu-item">
+                <mat-icon>manage_accounts</mat-icon>
+            </a>
+            <a href="#" class="menu-item">
+                <mat-icon>logout</mat-icon>
+            </a>
+        </div>
+
+        <div class="menu-divider"></div>
+        <button mat-icon-button color="accent"
+                (click)="snav.toggle()">
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+    </div>
+</div>
