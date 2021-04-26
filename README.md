@@ -1,4 +1,4 @@
-![dnstrust_260](https://user-images.githubusercontent.com/448244/114887724-9c09ab00-9e00-11eb-944e-8986972c955a.png)
+![dnstrusted-250](https://user-images.githubusercontent.com/448244/116058217-835a8a00-a677-11eb-8ebf-7540c4e0e8af.png)
 
 Welcome to the DNS Trust code repository!
 
