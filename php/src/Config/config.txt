@@ -1,11 +1,16 @@
-application.name = DNS Trust
-application.namespace = DNSTrust
+application.name = DNS Brand Watch
+application.namespace = DNSBrandWatch
 
 search.paths = ../vendor/oxil/kiniauth/php/src;../vendor/oxil/kinicart/php/src
 
-db.provider = mysql
-db.host = 127.0.0.1
-db.database = dnstrust
-db.username = dnstrust
-db.password = dnstrust
-db.logFile = /tmp/allqueries.sql
+db.provider = sqlite3
+db.filename = DB/dnsbrandwatch.db
+db.logFile = DB/db.log
+
+login.max.attempts = 500
+login.single.session = false
+
+recaptcha.secret.key = 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
+
+session.cookie.domain = WILDCARD
+session.cookie.secure = false

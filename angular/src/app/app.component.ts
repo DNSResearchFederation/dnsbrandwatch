@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, ViewChild} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import {MediaMatcher} from '@angular/cdk/layout';
@@ -16,7 +16,7 @@ import {TagService} from './services/tag.service';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.sass']
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
 
     @ViewChild('snav', {static: false}) public snav: MatSidenav;
 
@@ -37,7 +37,6 @@ export class AppComponent {
     private tagSub: Subscription;
     private authSub: Subscription;
     private loadingSub: Subscription;
-    private notificationSub: Subscription;
 
     constructor(private changeDetectorRef: ChangeDetectorRef,
                 private media: MediaMatcher,
@@ -56,9 +55,9 @@ export class AppComponent {
     ngOnInit() {
         this.projectSub = this.projectService.activeProject.subscribe(project => {
             this.activeProject = project;
-            if (!project) {
-                this.selectProject(true);
-            }
+            // if (!project) {
+            //     this.selectProject(true);
+            // }
         });
         this.tagSub = this.tagService.activeTag.subscribe(tag => {
             this.activeTag = tag;

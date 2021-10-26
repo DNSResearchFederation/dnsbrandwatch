@@ -4,8 +4,8 @@
 
 export const environment = {
     production: false,
-    backendURL: 'http://127.0.0.1:3100',
-    accountURL: 'http://127.0.0.1:3100/account',
+    backendURL: 'http://dnsbrandwatch.test:3100',
+    accountURL: 'http://dnsbrandwatch.test:3100/account',
     tagLabel: 'Tags',
     recaptchaKey: '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
 };
