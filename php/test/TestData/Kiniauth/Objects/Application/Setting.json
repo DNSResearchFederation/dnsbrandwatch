@@ -21,5 +21,17 @@
   {
     "key": "dashboardURL",
     "value": "http://dashboard.dnsbrandwatch.test:7999"
+  },
+  {
+    "key": "dapLiveEndpoint",
+    "value": "http://127.0.0.1:3055"
+  },
+  {
+    "key": "dapLiveApiKey",
+    "value": "BRANDPROTECT"
+  },
+  {
+    "key": "dapLiveApiSecret",
+    "value": "PROTECTME"
   }
 ]

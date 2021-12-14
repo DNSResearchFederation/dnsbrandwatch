@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f3e35b6e10854a4b10e358844bfd1956",
+    "content-hash": "b9429601759015e529f1d6ed3458c34b",
     "packages": [
         {
             "name": "cache/adapter-common",
@@ -209,12 +209,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/ChristianRiesen/base32.git",
-                "reference": "2e82dab3baa008e24a505649b0d583c31d31e894"
+                "reference": "e8b7d85382e396b101d418844b997b4cd744cb8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ChristianRiesen/base32/zipball/2e82dab3baa008e24a505649b0d583c31d31e894",
-                "reference": "2e82dab3baa008e24a505649b0d583c31d31e894",
+                "url": "https://api.github.com/repos/ChristianRiesen/base32/zipball/e8b7d85382e396b101d418844b997b4cd744cb8f",
+                "reference": "e8b7d85382e396b101d418844b997b4cd744cb8f",
                 "shasum": ""
             },
             "require": {
@@ -259,22 +259,59 @@
             ],
             "support": {
                 "issues": "https://github.com/ChristianRiesen/base32/issues",
-                "source": "https://github.com/ChristianRiesen/base32/tree/1.6.0"
+                "source": "https://github.com/ChristianRiesen/base32/tree/master"
             },
-            "time": "2021-02-26T10:19:33+00:00"
+            "time": "2021-09-09T12:43:30+00:00"
         },
         {
-            "name": "dolondro/google-authenticator",
-            "version": "2.1.0",
+            "name": "dnsresearchfederation/dap-api-php",
+            "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "https://github.com/dochne/google-authenticator.git",
-                "reference": "871f0f209004e5c398ce7fdd6bb2bc66887faf50"
+                "url": "https://github.com/DNSResearchFederation/dap-api-php.git",
+                "reference": "ca9b638d4c75c9793c52a53db1a4b4b241dca270"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dochne/google-authenticator/zipball/871f0f209004e5c398ce7fdd6bb2bc66887faf50",
-                "reference": "871f0f209004e5c398ce7fdd6bb2bc66887faf50",
+                "url": "https://api.github.com/repos/DNSResearchFederation/dap-api-php/zipball/ca9b638d4c75c9793c52a53db1a4b4b241dca270",
+                "reference": "ca9b638d4c75c9793c52a53db1a4b4b241dca270",
+                "shasum": ""
+            },
+            "require": {
+                "oxil/kinikit-core": "dev-master"
+            },
+            "default-branch": true,
+            "type": "application",
+            "autoload": {
+                "psr-4": {
+                    "DAP\\API\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "DAP API",
+            "keywords": [
+                "data analysis",
+                "intelligence",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/DNSResearchFederation/dap-api-php/issues",
+                "source": "https://github.com/DNSResearchFederation/dap-api-php/tree/main"
+            },
+            "time": "2021-12-14T11:18:05+00:00"
+        },
+        {
+            "name": "dolondro/google-authenticator",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dochne/google-authenticator.git",
+                "reference": "e74b957d6829dbd5a2361c3959b993cee5ef18dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dochne/google-authenticator/zipball/e74b957d6829dbd5a2361c3959b993cee5ef18dd",
+                "reference": "e74b957d6829dbd5a2361c3959b993cee5ef18dd",
                 "shasum": ""
             },
             "require": {
@@ -309,9 +346,9 @@
             "description": "Code to authenticate against the Google Authenticator app",
             "support": {
                 "issues": "https://github.com/dochne/google-authenticator/issues",
-                "source": "https://github.com/dochne/google-authenticator/tree/2.1.0"
+                "source": "https://github.com/dochne/google-authenticator/tree/2.2.0"
             },
-            "time": "2019-03-12T22:27:26+00:00"
+            "time": "2021-05-24T13:41:10+00:00"
         },
         {
             "name": "google/recaptcha",
@@ -319,12 +356,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/google/recaptcha.git",
-                "reference": "f911286ad361c9fba1b422c07f040852c0c193a3"
+                "reference": "ed5645e799e43afa9eb181f214dc52f22982682d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/google/recaptcha/zipball/f911286ad361c9fba1b422c07f040852c0c193a3",
-                "reference": "f911286ad361c9fba1b422c07f040852c0c193a3",
+                "url": "https://api.github.com/repos/google/recaptcha/zipball/ed5645e799e43afa9eb181f214dc52f22982682d",
+                "reference": "ed5645e799e43afa9eb181f214dc52f22982682d",
                 "shasum": ""
             },
             "require": {
@@ -364,7 +401,7 @@
                 "issues": "https://github.com/google/recaptcha/issues",
                 "source": "https://github.com/google/recaptcha"
             },
-            "time": "2020-10-01T15:14:41+00:00"
+            "time": "2021-10-04T09:40:45+00:00"
         },
         {
             "name": "league/flysystem",
@@ -372,12 +409,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "4347fe7f4dde0954ed3df833fd568806b714e9a0"
+                "reference": "094defdb4a7001845300334e7c1ee2335925ef99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/4347fe7f4dde0954ed3df833fd568806b714e9a0",
-                "reference": "4347fe7f4dde0954ed3df833fd568806b714e9a0",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/094defdb4a7001845300334e7c1ee2335925ef99",
+                "reference": "094defdb4a7001845300334e7c1ee2335925ef99",
                 "shasum": ""
             },
             "require": {
@@ -458,20 +495,20 @@
                     "type": "other"
                 }
             ],
-            "time": "2021-03-21T09:35:17+00:00"
+            "time": "2021-12-09T09:40:50+00:00"
         },
         {
             "name": "league/mime-type-detection",
-            "version": "1.7.0",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/mime-type-detection.git",
-                "reference": "3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3"
+                "reference": "aa70e813a6ad3d1558fc927863d47309b4c23e69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3",
-                "reference": "3b9dff8aaf7323590c1d2e443db701eb1f9aa0d3",
+                "url": "https://api.github.com/repos/thephpleague/mime-type-detection/zipball/aa70e813a6ad3d1558fc927863d47309b4c23e69",
+                "reference": "aa70e813a6ad3d1558fc927863d47309b4c23e69",
                 "shasum": ""
             },
             "require": {
@@ -479,7 +516,7 @@
                 "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.18",
+                "friendsofphp/php-cs-fixer": "^3.2",
                 "phpstan/phpstan": "^0.12.68",
                 "phpunit/phpunit": "^8.5.8 || ^9.3"
             },
@@ -502,7 +539,7 @@
             "description": "Mime-type detection for Flysystem",
             "support": {
                 "issues": "https://github.com/thephpleague/mime-type-detection/issues",
-                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.7.0"
+                "source": "https://github.com/thephpleague/mime-type-detection/tree/1.9.0"
             },
             "funding": [
                 {
@@ -514,7 +551,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-18T20:58:21+00:00"
+            "time": "2021-11-21T11:48:40+00:00"
         },
         {
             "name": "league/uri-parser",
@@ -522,12 +559,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/uri-parser.git",
-                "reference": "917b60f69f7e2960b5026d3920e8066545139dcb"
+                "reference": "e6eb42f951433aa3106639b6592f1ef9f8a36d40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/uri-parser/zipball/917b60f69f7e2960b5026d3920e8066545139dcb",
-                "reference": "917b60f69f7e2960b5026d3920e8066545139dcb",
+                "url": "https://api.github.com/repos/thephpleague/uri-parser/zipball/e6eb42f951433aa3106639b6592f1ef9f8a36d40",
+                "reference": "e6eb42f951433aa3106639b6592f1ef9f8a36d40",
                 "shasum": ""
             },
             "require": {
@@ -584,20 +621,20 @@
                 "issues": "https://github.com/thephpleague/uri-parser/issues",
                 "source": "https://github.com/thephpleague/uri-parser/tree/1.x"
             },
-            "time": "2019-09-20T22:27:10+00:00"
+            "time": "2021-05-16T05:25:00+00:00"
         },
         {
             "name": "masterminds/html5",
-            "version": "2.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Masterminds/html5-php.git",
-                "reference": "cadcfaaa13153e0e8eb92c49a53e140cf1a85dea"
+                "reference": "f640ac1bdddff06ea333a920c95bbad8872429ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/cadcfaaa13153e0e8eb92c49a53e140cf1a85dea",
-                "reference": "cadcfaaa13153e0e8eb92c49a53e140cf1a85dea",
+                "url": "https://api.github.com/repos/Masterminds/html5-php/zipball/f640ac1bdddff06ea333a920c95bbad8872429ab",
+                "reference": "f640ac1bdddff06ea333a920c95bbad8872429ab",
                 "shasum": ""
             },
             "require": {
@@ -607,14 +644,13 @@
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.*",
-                "sami/sami": "~2.0",
-                "satooshi/php-coveralls": "1.0.*"
+                "phpunit/phpunit": "^4.8.35 || ^5.7.21 || ^6 || ^7"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
             "autoload": {
@@ -632,12 +668,12 @@
                     "email": "technosophos@gmail.com"
                 },
                 {
-                    "name": "Asmir Mustafic",
-                    "email": "goetas@gmail.com"
-                },
-                {
                     "name": "Matt Farina",
                     "email": "matt@mattfarina.com"
+                },
+                {
+                    "name": "Asmir Mustafic",
+                    "email": "goetas@gmail.com"
                 }
             ],
             "description": "An HTML5 parser and serializer.",
@@ -653,22 +689,22 @@
             ],
             "support": {
                 "issues": "https://github.com/Masterminds/html5-php/issues",
-                "source": "https://github.com/Masterminds/html5-php/tree/2.x"
+                "source": "https://github.com/Masterminds/html5-php/tree/2.7.5"
             },
-            "time": "2018-11-17T20:24:36+00:00"
+            "time": "2021-07-01T14:25:37+00:00"
         },
         {
             "name": "mustache/mustache",
-            "version": "dev-master",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/mustache.php.git",
-                "reference": "bbdf0aeabf9e0bfaab408b31ae6b3cac7459d974"
+                "reference": "63616440f7206e4a88970f12a1e5fe0981e704b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/bbdf0aeabf9e0bfaab408b31ae6b3cac7459d974",
-                "reference": "bbdf0aeabf9e0bfaab408b31ae6b3cac7459d974",
+                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/63616440f7206e4a88970f12a1e5fe0981e704b6",
+                "reference": "63616440f7206e4a88970f12a1e5fe0981e704b6",
                 "shasum": ""
             },
             "require": {
@@ -704,9 +740,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/mustache.php/issues",
-                "source": "https://github.com/bobthecow/mustache.php/tree/master"
+                "source": "https://github.com/bobthecow/mustache.php/tree/dev"
             },
-            "time": "2021-01-30T19:44:16+00:00"
+            "time": "2021-12-13T03:13:34+00:00"
         },
         {
             "name": "oxil/kiniauth",
@@ -714,12 +750,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kiniauth.git",
-                "reference": "4b5bb05e28eec4f4a36bf41b1691a848f767bbf9"
+                "reference": "c939c6e0a981f52b1a43d64f2a26de9e70decef4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kiniauth/zipball/4b5bb05e28eec4f4a36bf41b1691a848f767bbf9",
-                "reference": "4b5bb05e28eec4f4a36bf41b1691a848f767bbf9",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kiniauth/zipball/c939c6e0a981f52b1a43d64f2a26de9e70decef4",
+                "reference": "c939c6e0a981f52b1a43d64f2a26de9e70decef4",
                 "shasum": ""
             },
             "require": {
@@ -750,7 +786,7 @@
                 "issues": "https://github.com/OxfordInfoLabs/kiniauth/issues",
                 "source": "https://github.com/OxfordInfoLabs/kiniauth/tree/master"
             },
-            "time": "2021-02-25T09:32:15+00:00"
+            "time": "2021-12-03T16:30:53+00:00"
         },
         {
             "name": "oxil/kinicart",
@@ -798,12 +834,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kinikit-core.git",
-                "reference": "59534fd071738492a07845c06942720bb62660aa"
+                "reference": "b7a945db176a48a7f693bd73e35c867e3978065e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-core/zipball/59534fd071738492a07845c06942720bb62660aa",
-                "reference": "59534fd071738492a07845c06942720bb62660aa",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-core/zipball/b7a945db176a48a7f693bd73e35c867e3978065e",
+                "reference": "b7a945db176a48a7f693bd73e35c867e3978065e",
                 "shasum": ""
             },
             "require": {
@@ -838,7 +874,7 @@
                 "issues": "https://github.com/OxfordInfoLabs/kinikit-core/issues",
                 "source": "https://github.com/OxfordInfoLabs/kinikit-core/tree/master"
             },
-            "time": "2021-03-12T12:16:38+00:00"
+            "time": "2021-11-12T10:29:02+00:00"
         },
         {
             "name": "oxil/kinikit-mvc",
@@ -846,12 +882,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kinikit-mvc.git",
-                "reference": "9f7a3d029d879bae8a56e6f1069dbb88747fe73c"
+                "reference": "e811609a792545e7454341cfb22d743c02ba7003"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-mvc/zipball/9f7a3d029d879bae8a56e6f1069dbb88747fe73c",
-                "reference": "9f7a3d029d879bae8a56e6f1069dbb88747fe73c",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-mvc/zipball/e811609a792545e7454341cfb22d743c02ba7003",
+                "reference": "e811609a792545e7454341cfb22d743c02ba7003",
                 "shasum": ""
             },
             "require": {
@@ -881,7 +917,7 @@
                 "issues": "https://github.com/OxfordInfoLabs/kinikit-mvc/issues",
                 "source": "https://github.com/OxfordInfoLabs/kinikit-mvc/tree/master"
             },
-            "time": "2020-07-03T09:53:35+00:00"
+            "time": "2021-11-30T11:53:21+00:00"
         },
         {
             "name": "oxil/kinikit-persistence",
@@ -889,12 +925,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/OxfordInfoLabs/kinikit-persistence.git",
-                "reference": "401cc5e7b2159f957d41d8d4a32768d6e306d9e1"
+                "reference": "79e0f2e4662ef8ffcb6dac0187c18cef1ed90ac2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-persistence/zipball/401cc5e7b2159f957d41d8d4a32768d6e306d9e1",
-                "reference": "401cc5e7b2159f957d41d8d4a32768d6e306d9e1",
+                "url": "https://api.github.com/repos/OxfordInfoLabs/kinikit-persistence/zipball/79e0f2e4662ef8ffcb6dac0187c18cef1ed90ac2",
+                "reference": "79e0f2e4662ef8ffcb6dac0187c18cef1ed90ac2",
                 "shasum": ""
             },
             "require": {
@@ -923,7 +959,7 @@
                 "issues": "https://github.com/OxfordInfoLabs/kinikit-persistence/issues",
                 "source": "https://github.com/OxfordInfoLabs/kinikit-persistence/tree/master"
             },
-            "time": "2020-09-24T15:08:17+00:00"
+            "time": "2021-12-01T09:28:26+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -977,16 +1013,16 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v6.4.0",
+            "version": "v6.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "050d430203105c27c30efd1dce7aa421ad882d01"
+                "reference": "baeb7cde6b60b1286912690ab0693c7789a31e71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/050d430203105c27c30efd1dce7aa421ad882d01",
-                "reference": "050d430203105c27c30efd1dce7aa421ad882d01",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/baeb7cde6b60b1286912690ab0693c7789a31e71",
+                "reference": "baeb7cde6b60b1286912690ab0693c7789a31e71",
                 "shasum": ""
             },
             "require": {
@@ -998,10 +1034,12 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
                 "doctrine/annotations": "^1.2",
+                "php-parallel-lint/php-console-highlighter": "^0.5.0",
+                "php-parallel-lint/php-parallel-lint": "^1.3",
                 "phpcompatibility/php-compatibility": "^9.3.5",
                 "roave/security-advisories": "dev-latest",
-                "squizlabs/php_codesniffer": "^3.5.6",
-                "yoast/phpunit-polyfills": "^0.2.0"
+                "squizlabs/php_codesniffer": "^3.6.0",
+                "yoast/phpunit-polyfills": "^1.0.0"
             },
             "suggest": {
                 "ext-mbstring": "Needed to send email in multibyte encoding charset or decode encoded addresses",
@@ -1041,7 +1079,7 @@
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
             "support": {
                 "issues": "https://github.com/PHPMailer/PHPMailer/issues",
-                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.4.0"
+                "source": "https://github.com/PHPMailer/PHPMailer/tree/v6.5.3"
             },
             "funding": [
                 {
@@ -1049,7 +1087,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-31T20:06:42+00:00"
+            "time": "2021-11-25T16:34:11+00:00"
         },
         {
             "name": "psr/cache",
@@ -1102,22 +1140,21 @@
         },
         {
             "name": "psr/log",
-            "version": "dev-master",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "a18c1e692e02b84abbafe4856c3cd7cc6903908c"
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/a18c1e692e02b84abbafe4856c3cd7cc6903908c",
-                "reference": "a18c1e692e02b84abbafe4856c3cd7cc6903908c",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1147,28 +1184,27 @@
                 "psr-3"
             ],
             "support": {
-                "source": "https://github.com/php-fig/log/tree/master"
+                "source": "https://github.com/php-fig/log/tree/1.1.4"
             },
-            "time": "2021-03-02T15:02:34+00:00"
+            "time": "2021-05-03T11:20:27+00:00"
         },
         {
             "name": "psr/simple-cache",
-            "version": "dev-master",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/simple-cache.git",
-                "reference": "5a7b96b1dda5d957e01bc1bfe77dcca09c5a7474"
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/5a7b96b1dda5d957e01bc1bfe77dcca09c5a7474",
-                "reference": "5a7b96b1dda5d957e01bc1bfe77dcca09c5a7474",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1201,7 +1237,7 @@
             "support": {
                 "source": "https://github.com/php-fig/simple-cache/tree/master"
             },
-            "time": "2020-04-21T06:43:17+00:00"
+            "time": "2017-10-23T01:57:42+00:00"
         },
         {
             "name": "stripe/stripe-php",
@@ -1270,16 +1306,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "c6c942b1ac76c82448322025e084cadc56048b4e"
+                "reference": "30885182c981ab175d4d034db0f6f469898070ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/c6c942b1ac76c82448322025e084cadc56048b4e",
-                "reference": "c6c942b1ac76c82448322025e084cadc56048b4e",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/30885182c981ab175d4d034db0f6f469898070ab",
+                "reference": "30885182c981ab175d4d034db0f6f469898070ab",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
+            },
+            "provide": {
+                "ext-ctype": "*"
             },
             "suggest": {
                 "ext-ctype": "For best performance"
@@ -1288,7 +1327,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.22-dev"
+                    "dev-main": "1.23-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -1326,7 +1365,7 @@
                 "portable"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.22.1"
+                "source": "https://github.com/symfony/polyfill-ctype/tree/main"
             },
             "funding": [
                 {
@@ -1342,7 +1381,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-07T16:49:33+00:00"
+            "time": "2021-10-20T20:35:02+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1350,16 +1389,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1"
+                "reference": "0abb51d2f102e00a4eefcf46ba7fec406d245825"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/5232de97ee3b75b0360528dae24e73db49566ab1",
-                "reference": "5232de97ee3b75b0360528dae24e73db49566ab1",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/0abb51d2f102e00a4eefcf46ba7fec406d245825",
+                "reference": "0abb51d2f102e00a4eefcf46ba7fec406d245825",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
+            },
+            "provide": {
+                "ext-mbstring": "*"
             },
             "suggest": {
                 "ext-mbstring": "For best performance"
@@ -1368,7 +1410,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "1.22-dev"
+                    "dev-main": "1.23-dev"
                 },
                 "thanks": {
                     "name": "symfony/polyfill",
@@ -1407,7 +1449,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.22.1"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/main"
             },
             "funding": [
                 {
@@ -1423,7 +1465,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-22T09:19:47+00:00"
+            "time": "2021-11-30T18:21:41+00:00"
         },
         {
             "name": "tgalopin/html-sanitizer",
@@ -1479,12 +1521,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "cdd521375e475224769c02d52626b09e4aaf5466"
+                "reference": "31629a69f7a074e44e3f180b3940a579f56ed3fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/cdd521375e475224769c02d52626b09e4aaf5466",
-                "reference": "cdd521375e475224769c02d52626b09e4aaf5466",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/31629a69f7a074e44e3f180b3940a579f56ed3fb",
+                "reference": "31629a69f7a074e44e3f180b3940a579f56ed3fb",
                 "shasum": ""
             },
             "require": {
@@ -1494,7 +1536,7 @@
             },
             "require-dev": {
                 "psr/container": "^1.0",
-                "symfony/phpunit-bridge": "^4.4.9|^5.0.9"
+                "symfony/phpunit-bridge": "^4.4.9|^5.0.9|^6.0"
             },
             "default-branch": true,
             "type": "library",
@@ -1548,18 +1590,19 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-04-06T06:27:27+00:00"
+            "time": "2021-11-29T08:51:28+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "oxil/kinicart": 20
+        "oxil/kinicart": 20,
+        "dnsresearchfederation/dap-api-php": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
