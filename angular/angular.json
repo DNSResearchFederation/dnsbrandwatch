@@ -27,16 +27,21 @@
                         "tsConfig": "tsconfig.app.json",
                         "aot": true,
                         "preserveSymlinks": true,
-                        "inlineStyleLanguage": "sass",
+                        "allowedCommonJsDependencies": [
+                            "gridstack"
+                        ],
                         "assets": [
                             "src/favicon.ico",
                             "src/assets"
                         ],
                         "styles": [
                             "src/custom-theme.scss",
-                            "src/styles.sass"
+                            "src/styles.sass",
+                            "./node_modules/gridstack/dist/gridstack.min.css"
                         ],
-                        "scripts": []
+                        "scripts": [
+                            "./node_modules/kinibind/dist/kinibind.js"
+                        ]
                     },
                     "configurations": {
                         "production": {
@@ -73,15 +78,14 @@
                 },
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "angular:build"
+                    },
                     "configurations": {
                         "production": {
                             "browserTarget": "angular:build:production"
-                        },
-                        "development": {
-                            "browserTarget": "angular:build:development"
                         }
-                    },
-                    "defaultConfiguration": "development"
+                    }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",

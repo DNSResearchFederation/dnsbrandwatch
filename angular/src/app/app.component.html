@@ -1,9 +1,9 @@
-<mat-progress-bar *ngIf="isLoading" color="primary" mode="indeterminate"></mat-progress-bar>
+<mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
 
-<mat-toolbar id="toolbar" color="primary" class="justify-between">
+<mat-toolbar id="toolbar" class="bg-gray-700 text-white justify-between">
     <div class="flex items-center">
         <div class="flex items-center mr-4">
-            <span class="flex items-center">DNS <mat-icon class="mx-1">travel_explore</mat-icon> Brand Watch</span>
+            <span class="flex items-center uppercase italic text-lg"><mat-icon class="mx-1">travel_explore</mat-icon> Brand Watch</span>
         </div>
 
         <button mat-stroked-button (click)="selectProject()">
@@ -12,26 +12,35 @@
             <mat-icon>expand_more</mat-icon>
         </button>
     </div>
-    <button mat-icon-button [matMenuTriggerFor]="notificationMenu">
-        <mat-icon [matBadge]="notificationCount" [matBadgeHidden]="notificationCount < 1" matBadgeColor="warn">
-            notifications
-        </mat-icon>
-    </button>
-    <mat-menu #notificationMenu="matMenu">
-        <button mat-menu-item [routerLink]="['/notifications']">View All</button>
-        <button mat-menu-item *ngFor="let notification of notifications"
-                [routerLink]="['/notifications', notification.id]"
-                [ngClass]="{'bg-blue-50 border-l-4 border-blue-200': !notification.read}">{{notification.title}}</button>
-    </mat-menu>
+    <div class="flex items-center">
+        <button mat-icon-button (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="notificationMenu">
+            <mat-icon [matBadge]="notificationCount" [matBadgeHidden]="notificationCount < 1" matBadgeColor="warn">
+                notifications
+            </mat-icon>
+        </button>
+        <mat-menu #notificationMenu="matMenu">
+            <button mat-menu-item [routerLink]="['/notifications']">View All</button>
+            <button mat-menu-item *ngFor="let notification of notifications"
+                    [routerLink]="['/notifications', notification.id]"
+                    [ngClass]="{'bg-blue-50 border-l-4 border-blue-200': !notification.read}">{{notification.title}}</button>
+        </mat-menu>
+    </div>
+
 </mat-toolbar>
 
-<mat-sidenav-container>
+<mat-sidenav-container class="dark:bg-gray-800">
     <mat-sidenav id="sidebar" #snav [mode]="mobileQuery.matches ? 'push' : 'side'"
+                 class="bg-white border-r border-gray-200 dark:border-gray-500 dark:bg-gray-700 dark:text-white"
                  [opened]="!mobileQuery.matches">
 
         <div>
             <div class="menu-items">
-                <a [routerLink]="['/home']" routerLinkActive="active" class="menu-item">
+                <a [routerLink]="['/home']" #started="routerLinkActive" routerLinkActive="active"
+                   class="menu-item text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-500 dark:text-gray-200"
+                   [ngClass]="{'bg-gray-300 dark:bg-gray-600': started.isActive}">
                     <mat-icon>not_started</mat-icon>
                     <span>Getting Started</span>
                 </a>
@@ -39,15 +48,22 @@
 
             <ng-template [ngIf]="loggedIn">
                 <div class="menu-items">
-                    <p class="menu-title">Brand Watch</p>
-                    <a [routerLink]="['/brands']" routerLinkActive="active" class="menu-item">
+                    <p class="menu-title text-gray-800 dark:text-gray-200">Brand Watch</p>
+                    <a [routerLink]="['/brands']" #brands="routerLinkActive" routerLinkActive="active"
+                       class="menu-item text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-500 dark:text-gray-200"
+                       [ngClass]="{'bg-gray-300 dark:bg-gray-600': brands.isActive}">
                         <mat-icon>view_list</mat-icon>
                         <span>Brands</span>
                     </a>
-
+                    <a [routerLink]="['/watch-domains']" #watchDomains="routerLinkActive" routerLinkActive="active"
+                       class="menu-item text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-500 dark:text-gray-200"
+                       [ngClass]="{'bg-gray-300 dark:bg-gray-600': watchDomains.isActive}">
+                        <mat-icon>alarm_on</mat-icon>
+                        <span>Watch Domains</span>
+                    </a>
                 </div>
                 <div class="menu-items collapsible">
-                    <p class="menu-title" (click)="settingsOpen = !settingsOpen">
+                    <p class="menu-title text-gray-800 dark:text-gray-200" (click)="settingsOpen = !settingsOpen">
                         Notifications
                         <svg *ngIf="!settingsOpen" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
                              viewBox="0 0 24 24" stroke="currentColor">
@@ -59,11 +75,16 @@
                         </svg>
                     </p>
                     <ng-template [ngIf]="settingsOpen">
-                        <a [routerLink]="['/notification-groups']" routerLinkActive="active" class="menu-item">
+                        <a [routerLink]="['/notification-groups']" #notification="routerLinkActive"
+                           routerLinkActive="active"
+                           class="menu-item text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-500 dark:text-gray-200"
+                           [ngClass]="{'bg-gray-300 dark:bg-gray-600': notification.isActive}">
                             <mat-icon>notifications</mat-icon>
                             <span>Notification Groups</span>
                         </a>
-                        <a [routerLink]="['/alert-groups']" routerLinkActive="active" class="menu-item">
+                        <a [routerLink]="['/alert-groups']" #alerts="routerLinkActive" routerLinkActive="active"
+                           class="menu-item text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-500 dark:text-gray-200"
+                           [ngClass]="{'bg-gray-300 dark:bg-gray-600': alerts.isActive}">
                             <mat-icon>campaign</mat-icon>
                             <span>Alert Groups</span>
                         </a>
@@ -72,27 +93,32 @@
             </ng-template>
         </div>
         <div>
-            <div class="menu-items">
-                <p *ngIf="loggedIn && sessionUser" class="menu-title">
+            <div class="menu-items border-b border-gray-200">
+                <p *ngIf="loggedIn && sessionUser" class="menu-title text-gray-800 dark:text-gray-200">
                     {{sessionUser.name}}
                 </p>
-                <a *ngIf="loggedIn" [routerLink]="['/my-account']" routerLinkActive="active" class="menu-item">
+                <a *ngIf="loggedIn" [routerLink]="['/my-account']" #accounts="routerLinkActive"
+                   routerLinkActive="active"
+                   class="menu-item text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-500 dark:text-gray-200"
+                   [ngClass]="{'bg-gray-300 dark:bg-gray-600': accounts.isActive}">
                     <mat-icon>manage_accounts</mat-icon>
                     <span>My Account</span>
                 </a>
-                <a *ngIf="!loggedIn" [routerLink]="['/login']" routerLinkActive="active" class="menu-item">
+                <a *ngIf="!loggedIn" [routerLink]="['/login']" #login="routerLinkActive" routerLinkActive="active"
+                   class="menu-item text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-500 dark:text-gray-200"
+                   [ngClass]="{'bg-gray-300 dark:bg-gray-600': login.isActive}">
                     <mat-icon>login</mat-icon>
                     <span>Login</span>
                 </a>
-                <a *ngIf="loggedIn" href="javascript:void(0)" routerLinkActive="active" class="menu-item"
+                <a *ngIf="loggedIn" href="javascript:void(0)" routerLinkActive="active"
+                   class="menu-item text-gray-800 hover:bg-gray-200 dark:hover:bg-gray-500 dark:text-gray-200"
                    (click)="logout()">
                     <mat-icon>logout</mat-icon>
                     <span>Logout</span>
                 </a>
             </div>
 
-            <div class="menu-divider"></div>
-            <button mat-icon-button color="accent" class="menu-back"
+            <button mat-icon-button class="text-gray-600 dark:text-gray-200 menu-back"
                     (click)="snav.toggle()">
                 <mat-icon>chevron_left</mat-icon>
             </button>
@@ -100,51 +126,7 @@
 
     </mat-sidenav>
 
-    <mat-sidenav-content id="main" [ngClass]="{'small-sidebar': showFixedSidebar}">
+    <mat-sidenav-content id="main">
         <router-outlet></router-outlet>
     </mat-sidenav-content>
 </mat-sidenav-container>
-<div class="fixed-sidebar-small" *ngIf="showFixedSidebar">
-    <div>
-        <div class="menu-items sm">
-            <a [routerLink]="['/home']" routerLinkActive="active" class="menu-item">
-                <mat-icon>not_started</mat-icon>
-            </a>
-        </div>
-
-        <div class="menu-items sm">
-            <a *ngIf="loggedIn" [routerLink]="['/brands']" routerLinkActive="active" class="menu-item">
-                <mat-icon>view_list</mat-icon>
-            </a>
-        </div>
-
-        <div class="menu-items sm">
-            <a *ngIf="loggedIn" [routerLink]="['/notification-groups']" routerLinkActive="active" class="menu-item">
-                <mat-icon>notifications</mat-icon>
-            </a>
-            <a *ngIf="loggedIn" [routerLink]="['/alert-groups']" routerLinkActive="active" class="menu-item">
-                <mat-icon>campaign</mat-icon>
-            </a>
-        </div>
-    </div>
-    <div>
-        <div class="menu-items sm">
-            <a *ngIf="loggedIn" [routerLink]="['/my-account']" routerLinkActive="active" class="menu-item">
-                <mat-icon>manage_accounts</mat-icon>
-            </a>
-            <a *ngIf="!loggedIn" [routerLink]="['/login']" routerLinkActive="active" class="menu-item">
-                <mat-icon>login</mat-icon>
-            </a>
-            <a *ngIf="loggedIn" href="javascript:void(0)" routerLinkActive="active" class="menu-item"
-               (click)="logout()">
-                <mat-icon>logout</mat-icon>
-            </a>
-        </div>
-
-        <div class="menu-divider"></div>
-        <button mat-icon-button color="accent"
-                (click)="snav.toggle()">
-            <mat-icon>chevron_right</mat-icon>
-        </button>
-    </div>
-</div>

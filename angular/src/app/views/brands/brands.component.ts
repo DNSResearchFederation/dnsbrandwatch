@@ -40,7 +40,8 @@ export class BrandsComponent implements OnInit {
     }
 
     public view(brand) {
-
+        this.brandService.setActiveBrand(brand);
+        this.router.navigate(['/brands', brand.projectKey]);
     }
 
     public saveNewBrand() {

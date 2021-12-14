@@ -31,6 +31,8 @@ import { AlertGroupsComponent } from './views/alert-groups/alert-groups.componen
 import { EditAlertGroupComponent } from './views/alert-groups/edit-alert-group/edit-alert-group.component';
 import { EditNotificationGroupComponent } from './views/notification-groups/edit-notification-group/edit-notification-group.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { MyAccountComponent } from './views/my-account/my-account.component';
+import { WatchDomainsComponent } from './views/watch-domains/watch-domains.component';
 
 @NgModule({
     declarations: [
@@ -42,7 +44,9 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
         AlertGroupsComponent,
         EditAlertGroupComponent,
         EditNotificationGroupComponent,
-        DashboardComponent
+        DashboardComponent,
+        MyAccountComponent,
+        WatchDomainsComponent
     ],
     imports: [
         BrowserModule,
